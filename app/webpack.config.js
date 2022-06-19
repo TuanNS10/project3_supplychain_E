@@ -3,13 +3,13 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   mode: 'development',
-  entry: "./src/index.js",
+  entry: "./src/app.js",
   output: {
-    filename: "index.js",
+    filename: "app.js",
     path: path.resolve(__dirname, "dist"),
   },
   plugins: [
-    new CopyWebpackPlugin([{ from: "./src/index.html", to: "index.html" }]),
+    new CopyWebpackPlugin([{ from: "../index.html", to: "index.html" }]),
   ],
   devServer: { contentBase: path.join(__dirname, "dist"), compress: true },
 };
